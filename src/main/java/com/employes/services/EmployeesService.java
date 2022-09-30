@@ -1,6 +1,7 @@
 package com.employes.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -22,7 +23,12 @@ public class EmployeesService {
     }
 
     public Employees findOne(Long id) {
-        return employeesRepo.findById(id).get();
+        Optional<Employees> employee = employeesRepo.findById(id);
+        if (!employee.isPresent()) {
+            return null;
+        } else {
+            return employee.get();
+        }
     }
 
     public Iterable<Employees> findAll() {
