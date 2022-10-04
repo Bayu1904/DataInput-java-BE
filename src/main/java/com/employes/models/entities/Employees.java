@@ -45,11 +45,11 @@ public class Employees implements Serializable {
     }
 
     public Long getPhone() {
-        return nik;
+        return phone;
     }
 
-    public void setPhone(Long nik) {
-        this.nik = nik;
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 
     public String getName() {
