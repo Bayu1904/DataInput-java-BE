@@ -16,7 +16,7 @@ public class Employees implements Serializable {
     private Long nik;
     private String name;
     private String gender;
-
+    private Long phone;
     @Column(length = 500)
     private String address;
     private Date date;
@@ -25,12 +25,14 @@ public class Employees implements Serializable {
     public Employees() {
     }
 
-    public Employees(Long id, Long nik, String name, String gender, String address, Date date, String country) {
+    public Employees(Long id, Long nik, String name, String gender, Long phone, String address, Date date,
+            String country) {
         this.nik = nik;
         this.name = name;
         this.gender = gender;
         this.address = address;
         this.date = date;
+        this.phone = phone;
         this.country = country;
     }
 
@@ -39,6 +41,14 @@ public class Employees implements Serializable {
     }
 
     public void setNik(Long nik) {
+        this.nik = nik;
+    }
+
+    public Long getPhone() {
+        return nik;
+    }
+
+    public void setPhone(Long nik) {
         this.nik = nik;
     }
 
